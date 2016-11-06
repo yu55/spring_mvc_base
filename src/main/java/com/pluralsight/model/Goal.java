@@ -5,9 +5,11 @@ import org.hibernate.validator.constraints.Range;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name="goals")
 public class Goal {
 
     @Id
