@@ -47,5 +47,13 @@ public class Exercise {
 	public void setMinutes(int minutes) {
 		this.minutes = minutes;
 	}
-	
+
+	public Goal getGoal() {
+		return goal;
+	}
+
+	public void setGoal(Goal goal) {
+		this.goal = goal;
+	}
+
 }
