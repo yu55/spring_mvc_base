@@ -20,7 +20,7 @@ public class Goal {
     @Column(name = "MINUTES")
     private int minutes;
 
-    @OneToMany(mappedBy = "goal", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "goal", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Exercise> exercises = new ArrayList<Exercise>();
 
     public Long getId() {
@@ -39,4 +39,11 @@ public class Goal {
         this.minutes = minutes;
     }
 
+    public List<Exercise> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(List<Exercise> exercises) {
+        this.exercises = exercises;
+    }
 }
